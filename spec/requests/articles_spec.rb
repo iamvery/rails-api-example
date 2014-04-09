@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'request_spec_helper'
 
 describe 'articles endpoint' do
   describe 'GET #index' do
