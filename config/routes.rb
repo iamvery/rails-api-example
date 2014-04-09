@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :articles, only: :index
+  scope module: :v1 do
+    resources :articles, only: :index
+  end
 end
