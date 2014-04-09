@@ -31,3 +31,13 @@ unversioned Rails API.
 The initial, unversioned implementation is at https://github.com/iamvery/rails-api-example/tree/initial-api-implementation.
 From there the commits incrementally add versioning to the API using HTTP
 accept headers with a [vendor mime type](http://en.wikipedia.org/wiki/Internet_media_type#Vendor_tree).
+
+## What's interesting?
+
+There are few suite spots in this repo (see what I did there?)
+
+* [Articles v1 controller](app/controllers/v1/articles_controller.rb)
+* [Articles v2 controller](app/controllers/v2/articles_controller.rb)
+* [Endpoints specs](spec/requests/articles_spec.rb)
+* [Routes](config/routes.rb)
+* [API Route Constraint](app/constraints/api_constraint.rb)
