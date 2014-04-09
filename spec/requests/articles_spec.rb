@@ -3,7 +3,7 @@ require 'request_spec_helper'
 describe 'articles endpoint' do
   describe 'GET #index' do
     it 'responds with an array of articles' do
-      get '/articles.json'
+      get '/articles', {}, HTTP_ACCEPT: 'application/json; version=1'
 
       json = JSON.parse(response.body)
 
