@@ -6,7 +6,7 @@ module V2
       ]
 
       respond_to do |format|
-        format.articles_json do
+        format.any(:articles_json, :json) do
           render json: { articles: articles }
         end
       end

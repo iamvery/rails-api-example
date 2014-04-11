@@ -12,6 +12,15 @@ describe 'articles endpoint' do
         expect(json.count).to eq(1)
         expect(json.first['name']).to eq('The Things')
       end
+
+      it 'accepts requests with .json suffix' do
+        get '/articles.json', {}, HTTP_ACCEPT: 'application/vnd.articles+json; version=1'
+
+        json = JSON.parse(response.body)
+
+        expect(json.count).to eq(1)
+        expect(json.first['name']).to eq('The Things')
+      end
     end
 
     describe 'v2' do
@@ -22,6 +31,16 @@ describe 'articles endpoint' do
         articles = json.fetch('articles')
 
         # these values are hard-coded in the controller as example
+        expect(articles.count).to eq(1)
+        expect(articles.first['name']).to eq('The Things')
+      end
+
+      it 'accepts requests with .json suffix' do
+        get '/articles.json', {}, HTTP_ACCEPT: 'application/vnd.articles+json; version=2'
+
+        json = JSON.parse(response.body)
+        articles = json.fetch('articles')
+
         expect(articles.count).to eq(1)
         expect(articles.first['name']).to eq('The Things')
       end
