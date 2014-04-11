@@ -4,7 +4,7 @@ describe 'articles endpoint' do
   describe 'GET #index' do
     describe 'v1' do
       it 'responds with an array of articles' do
-        get '/articles', {}, HTTP_ACCEPT: 'application/json; version=1'
+        get '/articles', {}, HTTP_ACCEPT: 'application/vnd.articles+json; version=1'
 
         json = JSON.parse(response.body)
 
@@ -16,7 +16,7 @@ describe 'articles endpoint' do
 
     describe 'v2' do
       it 'responds with an array of articles under a root node' do
-        get '/articles', {}, HTTP_ACCEPT: 'application/json; version=2'
+        get '/articles', {}, HTTP_ACCEPT: 'application/vnd.articles+json; version=2'
 
         json = JSON.parse(response.body)
         articles = json.fetch('articles')

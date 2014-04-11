@@ -6,7 +6,7 @@ module V1
       ]
 
       respond_to do |format|
-        format.json do
+        format.articles_json do
           render json: articles
         end
       end
