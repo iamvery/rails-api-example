@@ -30,7 +30,7 @@ unversioned Rails API.
 
 The initial, unversioned implementation is at https://github.com/iamvery/rails-api-example/tree/initial-api-implementation.
 From there the commits incrementally add versioning to the API using HTTP
-accept headers with a [vendor mime type](http://en.wikipedia.org/wiki/Internet_media_type#Vendor_tree).
+accept headers with a [vendor internet media type](http://en.wikipedia.org/wiki/Internet_media_type#Vendor_tree).
 
 ## What's interesting?
 
